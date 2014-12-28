@@ -23,7 +23,9 @@ ActiveRecord::Schema.define(version: 20141221022542) do
     t.datetime "updated_at"
   end
 
-  create_table "categories_products", force: true do |t|
+  create_table "categories_products", id: false, force: true do |t|
+    t.integer "category_id", null: false
+    t.integer "product_id",  null: false
   end
 
   create_table "customers", force: true do |t|
